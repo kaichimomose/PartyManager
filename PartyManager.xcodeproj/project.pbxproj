@@ -8,20 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		BF24416B1F342FD5001160D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24416A1F342FD5001160D0 /* AppDelegate.swift */; };
-		BF24416D1F342FD5001160D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24416C1F342FD5001160D0 /* ViewController.swift */; };
 		BF2441701F342FD5001160D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24416E1F342FD5001160D0 /* Main.storyboard */; };
 		BF2441721F342FD5001160D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2441711F342FD5001160D0 /* Assets.xcassets */; };
 		BF2441751F342FD5001160D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2441731F342FD5001160D0 /* LaunchScreen.storyboard */; };
+		BF24417E1F344F04001160D0 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24417C1F344F04001160D0 /* HomeView.storyboard */; };
+		BF2441841F345172001160D0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441831F345172001160D0 /* HomeViewController.swift */; };
+		BF2441871F348EF9001160D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441861F348EF9001160D0 /* Constants.swift */; };
+		BF24418B1F36D15C001160D0 /* ListDrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24418A1F36D15C001160D0 /* ListDrinksTableViewCell.swift */; };
+		BF24418E1F36D81E001160D0 /* ListDrinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24418D1F36D81E001160D0 /* ListDrinksTableViewController.swift */; };
+		BF2441901F36FD33001160D0 /* DisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24418F1F36FD33001160D0 /* DisplayListViewController.swift */; };
+		BF2441931F382B81001160D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2441921F382B81001160D0 /* CoreData.framework */; };
+		BF2441961F382B99001160D0 /* PartyManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF2441941F382B99001160D0 /* PartyManager.xcdatamodeld */; };
+		BF2441981F382D11001160D0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441971F382D11001160D0 /* CoreDataHelper.swift */; };
+		BF24419A1F3832BF001160D0 /* DataToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441991F3832BF001160D0 /* DataToString.swift */; };
+		BF24419C1F3895D7001160D0 /* DisplayRecapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24419B1F3895D7001160D0 /* DisplayRecapViewController.swift */; };
+		BF24419F1F393EE2001160D0 /* ListParties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24419D1F393EE2001160D0 /* ListParties.storyboard */; };
+		BF2441A11F394C27001160D0 /* ListPartiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A01F394C27001160D0 /* ListPartiesTableViewController.swift */; };
+		BF2441A31F39550A001160D0 /* ListPartiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A21F39550A001160D0 /* ListPartiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF2441671F342FD5001160D0 /* PartyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF24416A1F342FD5001160D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF24416C1F342FD5001160D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF24416F1F342FD5001160D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF2441711F342FD5001160D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2441741F342FD5001160D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF2441761F342FD5001160D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF24417D1F344F04001160D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeView.storyboard; sourceTree = "<group>"; };
+		BF2441831F345172001160D0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF2441861F348EF9001160D0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
+		BF24418A1F36D15C001160D0 /* ListDrinksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListDrinksTableViewCell.swift; path = Views/ListDrinksTableViewCell.swift; sourceTree = "<group>"; };
+		BF24418D1F36D81E001160D0 /* ListDrinksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ListDrinksTableViewController.swift; path = Controllers/ListDrinksTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BF24418F1F36FD33001160D0 /* DisplayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayListViewController.swift; path = Controllers/DisplayListViewController.swift; sourceTree = "<group>"; };
+		BF2441921F382B81001160D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BF2441951F382B99001160D0 /* PartyManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PartyManager.xcdatamodel; sourceTree = "<group>"; };
+		BF2441971F382D11001160D0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = CoreDataHelper.swift; path = Supporting/CoreDataHelper.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BF2441991F3832BF001160D0 /* DataToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataToString.swift; path = Supporting/DataToString.swift; sourceTree = "<group>"; };
+		BF24419B1F3895D7001160D0 /* DisplayRecapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayRecapViewController.swift; path = Controllers/DisplayRecapViewController.swift; sourceTree = "<group>"; };
+		BF24419E1F393EE2001160D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ListParties.storyboard; sourceTree = "<group>"; };
+		BF2441A01F394C27001160D0 /* ListPartiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ListPartiesTableViewController.swift; path = Controllers/ListPartiesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BF2441A21F39550A001160D0 /* ListPartiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ListPartiesTableViewCell.swift; path = Views/ListPartiesTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2441931F382B81001160D0 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +67,7 @@
 			children = (
 				BF2441691F342FD5001160D0 /* PartyManager */,
 				BF2441681F342FD5001160D0 /* Products */,
+				BF2441911F382B80001160D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +83,65 @@
 			isa = PBXGroup;
 			children = (
 				BF24416A1F342FD5001160D0 /* AppDelegate.swift */,
-				BF24416C1F342FD5001160D0 /* ViewController.swift */,
-				BF24416E1F342FD5001160D0 /* Main.storyboard */,
+				BF2441941F382B99001160D0 /* PartyManager.xcdatamodeld */,
+				BF24418C1F36D16C001160D0 /* Views */,
+				BF2441851F345178001160D0 /* Controllers */,
+				BF24417F1F344FDB001160D0 /* Storyboard */,
 				BF2441711F342FD5001160D0 /* Assets.xcassets */,
-				BF2441731F342FD5001160D0 /* LaunchScreen.storyboard */,
-				BF2441761F342FD5001160D0 /* Info.plist */,
+				BF2441801F345000001160D0 /* Supporting File */,
 			);
 			path = PartyManager;
+			sourceTree = "<group>";
+		};
+		BF24417F1F344FDB001160D0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BF24416E1F342FD5001160D0 /* Main.storyboard */,
+				BF24419D1F393EE2001160D0 /* ListParties.storyboard */,
+				BF24417C1F344F04001160D0 /* HomeView.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		BF2441801F345000001160D0 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				BF2441861F348EF9001160D0 /* Constants.swift */,
+				BF2441731F342FD5001160D0 /* LaunchScreen.storyboard */,
+				BF2441761F342FD5001160D0 /* Info.plist */,
+				BF2441971F382D11001160D0 /* CoreDataHelper.swift */,
+				BF2441991F3832BF001160D0 /* DataToString.swift */,
+			);
+			name = "Supporting File";
+			sourceTree = "<group>";
+		};
+		BF2441851F345178001160D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF2441831F345172001160D0 /* HomeViewController.swift */,
+				BF24418D1F36D81E001160D0 /* ListDrinksTableViewController.swift */,
+				BF24418F1F36FD33001160D0 /* DisplayListViewController.swift */,
+				BF24419B1F3895D7001160D0 /* DisplayRecapViewController.swift */,
+				BF2441A01F394C27001160D0 /* ListPartiesTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BF24418C1F36D16C001160D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF24418A1F36D15C001160D0 /* ListDrinksTableViewCell.swift */,
+				BF2441A21F39550A001160D0 /* ListPartiesTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BF2441911F382B80001160D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF2441921F382B81001160D0 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +206,8 @@
 			files = (
 				BF2441751F342FD5001160D0 /* LaunchScreen.storyboard in Resources */,
 				BF2441721F342FD5001160D0 /* Assets.xcassets in Resources */,
+				BF24419F1F393EE2001160D0 /* ListParties.storyboard in Resources */,
+				BF24417E1F344F04001160D0 /* HomeView.storyboard in Resources */,
 				BF2441701F342FD5001160D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +219,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF24416D1F342FD5001160D0 /* ViewController.swift in Sources */,
+				BF2441A31F39550A001160D0 /* ListPartiesTableViewCell.swift in Sources */,
+				BF24419C1F3895D7001160D0 /* DisplayRecapViewController.swift in Sources */,
+				BF24418E1F36D81E001160D0 /* ListDrinksTableViewController.swift in Sources */,
 				BF24416B1F342FD5001160D0 /* AppDelegate.swift in Sources */,
+				BF2441981F382D11001160D0 /* CoreDataHelper.swift in Sources */,
+				BF24419A1F3832BF001160D0 /* DataToString.swift in Sources */,
+				BF24418B1F36D15C001160D0 /* ListDrinksTableViewCell.swift in Sources */,
+				BF2441961F382B99001160D0 /* PartyManager.xcdatamodeld in Sources */,
+				BF2441901F36FD33001160D0 /* DisplayListViewController.swift in Sources */,
+				BF2441A11F394C27001160D0 /* ListPartiesTableViewController.swift in Sources */,
+				BF2441841F345172001160D0 /* HomeViewController.swift in Sources */,
+				BF2441871F348EF9001160D0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +251,22 @@
 				BF2441741F342FD5001160D0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BF24417C1F344F04001160D0 /* HomeView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF24417D1F344F04001160D0 /* Base */,
+			);
+			name = HomeView.storyboard;
+			sourceTree = "<group>";
+		};
+		BF24419D1F393EE2001160D0 /* ListParties.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF24419E1F393EE2001160D0 /* Base */,
+			);
+			name = ListParties.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -304,8 +412,23 @@
 				BF24417B1F342FD5001160D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF2441941F382B99001160D0 /* PartyManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF2441951F382B99001160D0 /* PartyManager.xcdatamodel */,
+			);
+			currentVersion = BF2441951F382B99001160D0 /* PartyManager.xcdatamodel */;
+			name = PartyManager.xcdatamodeld;
+			path = Models/PartyManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF24415F1F342FD5001160D0 /* Project object */;
 }
