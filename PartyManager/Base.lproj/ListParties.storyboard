@@ -22,31 +22,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffU-Dj-Ibt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="401" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffU-Dj-Ibt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listPartyTableViewCell" id="be3-K0-92t" customClass="ListPartyTableViewCell" customModule="PartyManager" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="listPartyTableViewCell" rowHeight="401" id="be3-K0-92t" customClass="ListPartyTableViewCell" customModule="PartyManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="401"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="be3-K0-92t" id="aSu-g3-sZ9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WAw-H1-onU">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <rect key="frame" x="12" y="0.0" width="350" height="400.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-P7-xZs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="25.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="32.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="PartyName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtC-As-bvc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="307.5" height="25.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="298.5" height="32.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="feeling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTX-hv-5fD">
-                                                                    <rect key="frame" x="307.5" y="0.0" width="51.5" height="25.5"/>
+                                                                    <rect key="frame" x="298.5" y="0.0" width="51.5" height="32.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OlY-7m-GYx">
-                                                            <rect key="frame" x="0.0" y="25.5" width="350" height="18"/>
+                                                            <rect key="frame" x="0.0" y="32.5" width="350" height="18"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Xr-yK-OGU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="121.5" height="18"/>
@@ -109,17 +109,28 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="tUg-oO-Qvd">
+                                                            <rect key="frame" x="0.0" y="50.5" width="350" height="350"/>
+                                                            <gestureRecognizers/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="350" id="C3e-Lw-ql6"/>
+                                                                <constraint firstAttribute="height" constant="350" id="ONu-EZ-xbd"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="tUg-oO-Qvd" secondAttribute="trailing" id="L6h-m8-ZV9"/>
+                                                        <constraint firstItem="tUg-oO-Qvd" firstAttribute="leading" secondItem="WAw-H1-onU" secondAttribute="leading" id="U4x-X0-z6o"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tUg-oO-Qvd" secondAttribute="trailing" id="dAd-P2-yZz"/>
                                                         <constraint firstItem="KNx-P7-xZs" firstAttribute="width" secondItem="WAw-H1-onU" secondAttribute="width" id="h7D-xY-G1f"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WAw-H1-onU" secondAttribute="trailing" constant="8" id="BDt-eN-CDp"/>
+                                                <constraint firstAttribute="trailing" secondItem="WAw-H1-onU" secondAttribute="trailing" constant="13" id="1Ba-Yq-b61"/>
                                                 <constraint firstAttribute="bottom" secondItem="WAw-H1-onU" secondAttribute="bottom" id="De2-7b-Pcv"/>
                                                 <constraint firstItem="WAw-H1-onU" firstAttribute="top" secondItem="aSu-g3-sZ9" secondAttribute="top" id="Umc-VR-J2X"/>
-                                                <constraint firstItem="WAw-H1-onU" firstAttribute="leading" secondItem="aSu-g3-sZ9" secondAttribute="leading" constant="8" id="bXj-w4-MAl"/>
+                                                <constraint firstItem="WAw-H1-onU" firstAttribute="leading" secondItem="aSu-g3-sZ9" secondAttribute="leading" constant="12" id="xz3-3Z-Rw3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -128,7 +139,7 @@
                                             <outlet property="feelingLabel" destination="jTX-hv-5fD" id="fpj-sv-cBE"/>
                                             <outlet property="hoursLabel" destination="SKb-O2-a3x" id="idp-0n-CZP"/>
                                             <outlet property="partyNameLabel" destination="xtC-As-bvc" id="wTp-lv-V1Z"/>
-                                            <segue destination="uQa-2w-Ede" kind="show" identifier="showParty" id="1za-sx-39t"/>
+                                            <outlet property="partyPhoto" destination="tUg-oO-Qvd" id="Luc-70-j4x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -146,7 +157,13 @@
                             <constraint firstItem="ffU-Dj-Ibt" firstAttribute="leading" secondItem="tEF-Y8-C4T" secondAttribute="leadingMargin" constant="-16" id="x0g-ae-LjP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Party Lists" id="A5J-9S-JFd"/>
+                    <navigationItem key="navigationItem" title="Party Lists" id="A5J-9S-JFd">
+                        <barButtonItem key="rightBarButtonItem" title="updata" id="oHP-SU-6wl">
+                            <connections>
+                                <action selector="updataTapped:" destination="7ud-aI-6PZ" id="whW-wW-myo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ffU-Dj-Ibt" id="5bv-05-lgB"/>
@@ -154,32 +171,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edm-vi-3hD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="1000"/>
-        </scene>
-        <!--Lists of Drinks-->
-        <scene sceneID="sCd-Fj-aAA">
-            <objects>
-                <viewController id="uQa-2w-Ede" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9Sz-4g-7GA"/>
-                        <viewControllerLayoutGuide type="bottom" id="aYo-k2-ok4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ECk-jJ-6JC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Lists of Drinks" id="pGi-7G-Fg2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J1Q-bE-0De" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1552.8" y="999.85007496251887"/>
+            <point key="canvasLocation" x="716" y="999.85007496251887"/>
         </scene>
         <!--Party List-->
         <scene sceneID="hAH-9b-dCy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbs-4F-iVY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Party List" id="yzD-B5-lwv"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Party List" image="list ICON" selectedImage="list ICON" id="yzD-B5-lwv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Imt-LB-Kcq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -195,4 +193,8 @@
             <point key="canvasLocation" x="-66.400000000000006" y="999.85007496251887"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="540" height="540"/>
+        <image name="list ICON" width="26" height="26"/>
+    </resources>
 </document>

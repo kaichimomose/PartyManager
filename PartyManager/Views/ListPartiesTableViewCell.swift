@@ -14,5 +14,6 @@ class ListPartyTableViewCell: UITableViewCell{
     @IBOutlet weak var drinksLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var partyPhoto: UIImageView!
     
 }

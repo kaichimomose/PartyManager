@@ -9,40 +9,65 @@
 import UIKit
 import CoreData
 
-class ListDrinksTableViewController: UIViewController{
+class ListDrinksTableViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var feelingTextField: UITextField!
     @IBOutlet weak var partyNameTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    var recap: Recap?
-    var party: Party?
+    @IBOutlet weak var timerView: UILabel!
+    
+    var timer = Timer()
+
+    var partyNameAndFeel: PartyNameAndFeel?
+    var time: Int?
     
     var lists = [List]() {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.partyNameTextField.delegate = self;
+        self.feelingTextField.delegate = self;
+
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
+
+        
+    }
+    
+    func counter() {
+        time! += 1
+        let seconds = Int(time! % 60)
+        let minutes = Int((time! / 60) % 60)
+        let hours = Int(time! / 3600)
+        
+        timerView.text = "\(hours):\(minutes):\(seconds)"
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 1
-        if let recap = recap {
+        if let partyNameAndFeel = partyNameAndFeel {
             //             2
-            partyNameTextField.text = recap.partyName
+            partyNameTextField.text = partyNameAndFeel.nameOfParty
+            feelingTextField.text = partyNameAndFeel.feeling
             
         } else {
             // 3
             partyNameTextField.text = ""
+            feelingTextField.text = ""
+            
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        lists = CoreDataHelper.retrieveList()
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
-    
-    @IBAction func unwindToDrinkListViewController(_ segue: UIStoryboardSegue) {
         
-        self.lists = CoreDataHelper.retrieveList()
+    @IBAction func unwindToDrinkListViewController(_ segue: UIStoryboardSegue) {
         
     }
     
@@ -61,9 +86,20 @@ class ListDrinksTableViewController: UIViewController{
             } else if identifier == "addList" {
                 print("+ button tapped")
             } else if identifier == "finish"{
-//                let party = self.party ?? CoreDataHelper.newParty()
-//                party.list = tableView ?? ""
-                CoreDataHelper.saveRecap()
+                let finishVC = segue.destination as! DisplayRecapViewController
+                finishVC.lists = lists
+                finishVC.time = time
+                if let partyNameAndFeel = partyNameAndFeel{
+                    partyNameAndFeel.nameOfParty = partyNameTextField.text ?? ""
+                    partyNameAndFeel.feeling = feelingTextField.text ?? ""
+                    finishVC.partyNameAndFeel = partyNameAndFeel
+                    
+                } else {
+                    let newpartyNameAndFeel = PartyNameAndFeel()
+                    newpartyNameAndFeel.nameOfParty = partyNameTextField.text ?? ""
+                    newpartyNameAndFeel.feeling = feelingTextField.text ?? ""
+                    finishVC.partyNameAndFeel = newpartyNameAndFeel
+                }
             }
         }
     }
@@ -88,7 +124,7 @@ extension ListDrinksTableViewController: UITableViewDataSource {
         
         cell.drinkVolumeLabel.text = list.volume
         
-        cell.drinkTimeLabel.text = list.drinkTime?.convertToString()
+        cell.drinkTimeLabel.text = list.drinkTime.convertToString()
         
         return cell
     }
@@ -96,29 +132,11 @@ extension ListDrinksTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         // 2
         if editingStyle == .delete {
-            //1
-            CoreDataHelper.delete(list: lists[indexPath.row])
-            //2
-            lists = CoreDataHelper.retrieveList()
+            
+            lists.remove(at: indexPath.row)
         }
     }
 
 }
-
-extension ListDrinksTableViewController : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let party = self.party ?? CoreDataHelper.newParty()
-//
-//        party.list = lists[indexPath.row]
-//        
-//        
-//        
-//        
-//        CoreDataHelper.saveParty()
-    }
-    
-}
-
 
 

@@ -11,6 +11,10 @@ import UIKit
 class ListPartyTableViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func updataTapped(_ sender: UIBarButtonItem) {
+        recaps = CoreDataHelper.retrieveRecap()
+
+    }
     
     var recaps = [Recap]()
     {
@@ -35,14 +39,14 @@ class ListPartyTableViewController: UIViewController{
         if let identifier = segue.identifier {
             if identifier == "showParty" {
                 print("Table view cell tapped")
-//                // 1
-//                let indexPath = tableView.indexPathForSelectedRow!
-//                // 2
-//                let list = lists[indexPath.row]
-//                // 3
-//                let displayListViewController = segue.destination as! DisplayListViewController
-//                // 4
-//                displayListViewController.list = list
+                // 1
+                let indexPath = tableView.indexPathForSelectedRow!
+                // 2
+                let recap = recaps[indexPath.row]
+                // 3
+                let displayPhotoViewController = segue.destination as! DisplayPhotoViewController
+                // 4
+                displayPhotoViewController.recap = recap
             }
         }
     }
@@ -72,6 +76,11 @@ extension ListPartyTableViewController: UITableViewDataSource {
         cell.drinksLabel.text = recap.drinks
         // 4
         cell.hoursLabel.text = recap.hours
+        
+        let imageData = recap.partyPhoto
+        if let imageData = imageData {
+            cell.partyPhoto.image = UIImage(data: imageData as Data)
+        }
         
         return cell
     }

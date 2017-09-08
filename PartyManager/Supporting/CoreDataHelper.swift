@@ -16,33 +16,6 @@ class CoreDataHelper: NSManagedObject  {
     
     //static methods will go here
     
-    static func newList() -> List{
-        return NSEntityDescription.insertNewObject(forEntityName: "List", into: managedContext) as! List
-    }
-    
-    static func saveList(){
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save \(error)")
-        }
-    }
-    
-    static func delete(list: List){
-        managedContext.delete(list)
-    }
-    
-    static func retrieveList() -> [List]{
-        let fetchRequest = NSFetchRequest<List>(entityName: "List")
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            return result
-        } catch let error as NSError {
-            print("Could not fetch \(error)")
-        }
-        return []
-    }
-    
     static func newRecap() -> Recap{
         return NSEntityDescription.insertNewObject(forEntityName: "Recap", into: managedContext) as! Recap
     }
@@ -61,34 +34,6 @@ class CoreDataHelper: NSManagedObject  {
     
     static func retrieveRecap() -> [Recap]{
         let fetchRequest = NSFetchRequest<Recap>(entityName: "Recap")
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            return result
-        } catch let error as NSError {
-            print("Could not fetch \(error)")
-        }
-        return []
-    }
-
-    
-    static func newParty() -> Party {
-        return NSEntityDescription.insertNewObject(forEntityName: "Party", into: managedContext) as! Party
-    }
-    
-    static func saveParty(){
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save \(error)")
-        }
-    }
-    
-    static func delete(party: Party){
-        managedContext.delete(party)
-    }
-    
-    static func retrieveParty() -> [Party]{
-        let fetchRequest = NSFetchRequest<Party>(entityName: "Party")
         do {
             let result = try managedContext.fetch(fetchRequest)
             return result

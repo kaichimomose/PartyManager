@@ -13,13 +13,25 @@ class DisplayListViewController: UIViewController {
     @IBOutlet weak var listNameTextField: UITextField!
     @IBOutlet weak var strengthSelect: UISegmentedControl!
     @IBOutlet weak var listVolumeTextField: UITextField!
-    var list: List?
+    @IBOutlet weak var unitLabel: UILabel!
     
+    var unit: ManageViewController?
+    var list: List?
+    var partyNameAndFeel: PartyNameAndFeel?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let unit = unit{
+        unitLabel.text = unit.unitSelect()
+        }
+    }
+
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 1
         if let list = list {
-//             2
+        // 2
             listNameTextField.text = list.name
             listVolumeTextField.text = list.volume
         
@@ -31,31 +43,36 @@ class DisplayListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let listDrinksTableViewController = segue.destination as! ListDrinksTableViewController
         if segue.identifier == "save" {
-            // if note exists, update title and content
-            let list = self.list ?? CoreDataHelper.newList()
-            list.name = listNameTextField.text ?? ""
-            var strength = ""
-            
-            switch strengthSelect.selectedSegmentIndex {
-            case 0:
-                strength = "weak"
-            case 1:
-                strength = "just right"
-            case 2:
-                strength = "strong"
-            default:
-                break
+            if let list = list {
+                // 1
+                list.name = listNameTextField.text ?? ""
+                list.volume = listVolumeTextField.text ?? ""
+                
+                listDrinksTableViewController.tableView.reloadData()
+            } else {
+                // 3
+                let newList = List()
+                newList.name = listNameTextField.text ?? ""
+                var strength = ""
+                
+                switch strengthSelect.selectedSegmentIndex {
+                case 0:
+                    strength = "weak"
+                case 1:
+                    strength = "just right"
+                case 2:
+                    strength = "strong"
+                default:
+                    break
+                }
+                newList.strength = strength
+                newList.volume = listVolumeTextField.text ?? ""
+                newList.drinkTime = Date()
+                listDrinksTableViewController.lists.append(newList)
             }
-            list.strength = strength
-            list.volume = listVolumeTextField.text ?? ""
-            list.drinkTime = Date() as NSDate
-            CoreDataHelper.saveList()
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
 }

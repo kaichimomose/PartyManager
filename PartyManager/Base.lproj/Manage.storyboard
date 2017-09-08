@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4c7-dg-EmR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Manage-->
+        <scene sceneID="unn-SX-Y4Y">
+            <objects>
+                <viewController id="qoG-XY-dnW" customClass="ManageViewController" customModule="PartyManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oZ6-zI-pbB"/>
+                        <viewControllerLayoutGuide type="bottom" id="w3r-Oh-u0J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I3A-RH-8OZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VD1-SI-A2u">
+                                <rect key="frame" x="46" y="84" width="283" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[ml] or [fl oz]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rib-zY-NNX">
+                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9gA-bz-ZDu">
+                                        <rect key="frame" x="170.5" y="0.0" width="112.5" height="29"/>
+                                        <segments>
+                                            <segment title="ml"/>
+                                            <segment title="fl oz"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VD1-SI-A2u" firstAttribute="leading" secondItem="I3A-RH-8OZ" secondAttribute="leadingMargin" constant="30" id="Gu9-xu-tin"/>
+                            <constraint firstItem="VD1-SI-A2u" firstAttribute="top" secondItem="oZ6-zI-pbB" secondAttribute="bottom" constant="20" id="ktT-nA-THF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VD1-SI-A2u" secondAttribute="trailing" constant="30" id="xhI-JM-wnJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage" id="jiu-6s-hYg"/>
+                    <connections>
+                        <outlet property="unitSelector" destination="9gA-bz-ZDu" id="2I7-SB-TAP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mz3-Z9-Q86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2311.1999999999998" y="896.40179910044981"/>
+        </scene>
+        <!--Manage-->
+        <scene sceneID="nLS-O0-UKg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4c7-dg-EmR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Manage" image="settings ICON" selectedImage="settings ICON" id="5yr-pv-nWU"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ht-D2-p3S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qoG-XY-dnW" kind="relationship" relationship="rootViewController" id="GQa-bS-aiH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNP-oY-6Gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="896.40179910044981"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="settings ICON" width="26" height="26"/>
+    </resources>
+</document>
