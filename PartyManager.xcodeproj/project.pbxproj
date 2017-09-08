@@ -25,6 +25,14 @@
 		BF24419F1F393EE2001160D0 /* ListParties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24419D1F393EE2001160D0 /* ListParties.storyboard */; };
 		BF2441A11F394C27001160D0 /* ListPartiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A01F394C27001160D0 /* ListPartiesTableViewController.swift */; };
 		BF2441A31F39550A001160D0 /* ListPartiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A21F39550A001160D0 /* ListPartiesTableViewCell.swift */; };
+		BF2441A51F3A8CBE001160D0 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A41F3A8CBE001160D0 /* List.swift */; };
+		BF2441A71F3AACAF001160D0 /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A61F3AACAF001160D0 /* MGPhotoHelper.swift */; };
+		BF2441AA1F3ACAA5001160D0 /* partyPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441A91F3ACAA5001160D0 /* partyPhotoCell.swift */; };
+		BF2441AC1F3AEEA0001160D0 /* PartyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441AB1F3AEEA0001160D0 /* PartyName.swift */; };
+		BF2441AE1F3C19B0001160D0 /* Feel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441AD1F3C19B0001160D0 /* Feel.swift */; };
+		BF2441B11F3C57CB001160D0 /* Manage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2441AF1F3C57CB001160D0 /* Manage.storyboard */; };
+		BF2441B31F3C59D5001160D0 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441B21F3C59D5001160D0 /* ManageViewController.swift */; };
+		BF2441B51F3CA7BF001160D0 /* DisplayPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2441B41F3CA7BF001160D0 /* DisplayPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +56,14 @@
 		BF24419E1F393EE2001160D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ListParties.storyboard; sourceTree = "<group>"; };
 		BF2441A01F394C27001160D0 /* ListPartiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ListPartiesTableViewController.swift; path = Controllers/ListPartiesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BF2441A21F39550A001160D0 /* ListPartiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ListPartiesTableViewCell.swift; path = Views/ListPartiesTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BF2441A41F3A8CBE001160D0 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = Supporting/List.swift; sourceTree = "<group>"; };
+		BF2441A61F3AACAF001160D0 /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
+		BF2441A91F3ACAA5001160D0 /* partyPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = partyPhotoCell.swift; path = Views/partyPhotoCell.swift; sourceTree = "<group>"; };
+		BF2441AB1F3AEEA0001160D0 /* PartyName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyName.swift; path = Supporting/PartyName.swift; sourceTree = "<group>"; };
+		BF2441AD1F3C19B0001160D0 /* Feel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feel.swift; path = Supporting/Feel.swift; sourceTree = "<group>"; };
+		BF2441B01F3C57CB001160D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Manage.storyboard; sourceTree = "<group>"; };
+		BF2441B21F3C59D5001160D0 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageViewController.swift; path = Controllers/ManageViewController.swift; sourceTree = "<group>"; };
+		BF2441B41F3CA7BF001160D0 /* DisplayPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayPhotoViewController.swift; path = Controllers/DisplayPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +105,7 @@
 				BF24417F1F344FDB001160D0 /* Storyboard */,
 				BF2441711F342FD5001160D0 /* Assets.xcassets */,
 				BF2441801F345000001160D0 /* Supporting File */,
+				BF2441A81F3AACB4001160D0 /* Helper */,
 			);
 			path = PartyManager;
 			sourceTree = "<group>";
@@ -97,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				BF24416E1F342FD5001160D0 /* Main.storyboard */,
+				BF2441AF1F3C57CB001160D0 /* Manage.storyboard */,
 				BF24419D1F393EE2001160D0 /* ListParties.storyboard */,
 				BF24417C1F344F04001160D0 /* HomeView.storyboard */,
 			);
@@ -111,6 +129,9 @@
 				BF2441761F342FD5001160D0 /* Info.plist */,
 				BF2441971F382D11001160D0 /* CoreDataHelper.swift */,
 				BF2441991F3832BF001160D0 /* DataToString.swift */,
+				BF2441A41F3A8CBE001160D0 /* List.swift */,
+				BF2441AB1F3AEEA0001160D0 /* PartyName.swift */,
+				BF2441AD1F3C19B0001160D0 /* Feel.swift */,
 			);
 			name = "Supporting File";
 			sourceTree = "<group>";
@@ -123,6 +144,8 @@
 				BF24418F1F36FD33001160D0 /* DisplayListViewController.swift */,
 				BF24419B1F3895D7001160D0 /* DisplayRecapViewController.swift */,
 				BF2441A01F394C27001160D0 /* ListPartiesTableViewController.swift */,
+				BF2441B21F3C59D5001160D0 /* ManageViewController.swift */,
+				BF2441B41F3CA7BF001160D0 /* DisplayPhotoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +155,7 @@
 			children = (
 				BF24418A1F36D15C001160D0 /* ListDrinksTableViewCell.swift */,
 				BF2441A21F39550A001160D0 /* ListPartiesTableViewCell.swift */,
+				BF2441A91F3ACAA5001160D0 /* partyPhotoCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -142,6 +166,14 @@
 				BF2441921F382B81001160D0 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF2441A81F3AACB4001160D0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BF2441A61F3AACAF001160D0 /* MGPhotoHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +241,7 @@
 				BF24419F1F393EE2001160D0 /* ListParties.storyboard in Resources */,
 				BF24417E1F344F04001160D0 /* HomeView.storyboard in Resources */,
 				BF2441701F342FD5001160D0 /* Main.storyboard in Resources */,
+				BF2441B11F3C57CB001160D0 /* Manage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,13 +256,20 @@
 				BF24419C1F3895D7001160D0 /* DisplayRecapViewController.swift in Sources */,
 				BF24418E1F36D81E001160D0 /* ListDrinksTableViewController.swift in Sources */,
 				BF24416B1F342FD5001160D0 /* AppDelegate.swift in Sources */,
+				BF2441A51F3A8CBE001160D0 /* List.swift in Sources */,
+				BF2441B31F3C59D5001160D0 /* ManageViewController.swift in Sources */,
 				BF2441981F382D11001160D0 /* CoreDataHelper.swift in Sources */,
 				BF24419A1F3832BF001160D0 /* DataToString.swift in Sources */,
 				BF24418B1F36D15C001160D0 /* ListDrinksTableViewCell.swift in Sources */,
+				BF2441AA1F3ACAA5001160D0 /* partyPhotoCell.swift in Sources */,
 				BF2441961F382B99001160D0 /* PartyManager.xcdatamodeld in Sources */,
 				BF2441901F36FD33001160D0 /* DisplayListViewController.swift in Sources */,
+				BF2441AE1F3C19B0001160D0 /* Feel.swift in Sources */,
+				BF2441AC1F3AEEA0001160D0 /* PartyName.swift in Sources */,
 				BF2441A11F394C27001160D0 /* ListPartiesTableViewController.swift in Sources */,
+				BF2441B51F3CA7BF001160D0 /* DisplayPhotoViewController.swift in Sources */,
 				BF2441841F345172001160D0 /* HomeViewController.swift in Sources */,
+				BF2441A71F3AACAF001160D0 /* MGPhotoHelper.swift in Sources */,
 				BF2441871F348EF9001160D0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +307,14 @@
 				BF24419E1F393EE2001160D0 /* Base */,
 			);
 			name = ListParties.storyboard;
+			sourceTree = "<group>";
+		};
+		BF2441AF1F3C57CB001160D0 /* Manage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF2441B01F3C57CB001160D0 /* Base */,
+			);
+			name = Manage.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
