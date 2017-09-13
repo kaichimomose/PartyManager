@@ -8,16 +8,35 @@
 
 import UIKit
 
-class DisplayListViewController: UIViewController {
+class DisplayListViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var listNameTextField: UITextField!
     @IBOutlet weak var strengthSelect: UISegmentedControl!
     @IBOutlet weak var listVolumeTextField: UITextField!
     @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var pickAlcohol: UIPickerView!
     
     var unit: ManageViewController?
     var list: List?
     var partyNameAndFeel: PartyNameAndFeel?
+    let alcohol = ["Beer", "Wine", "Sake", "Shochu"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return alcohol[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return alcohol.count
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        listNameTextField.text = alcohol[row]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -89,7 +89,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gak-Ci-eEk">
                                 <rect key="frame" x="16" y="596" width="343" height="22"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0:0:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7d-eN-l5Z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7d-eN-l5Z">
                                         <rect key="frame" x="0.0" y="0.0" width="96.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -404,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6ms-ZU-AGl">
-                                <rect key="frame" x="16" y="91" width="343" height="119"/>
+                                <rect key="frame" x="16" y="164" width="343" height="119"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-Rx-lkf">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -503,12 +503,20 @@
                                 <rect key="frame" x="-138" y="64" width="577" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJY-vh-8Hx">
+                                <rect key="frame" x="150" y="355" width="216" height="93"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fV9-Jz-OPP" id="w6c-as-yw7"/>
+                                    <outlet property="delegate" destination="fV9-Jz-OPP" id="ucC-zi-Ead"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6ms-ZU-AGl" secondAttribute="trailing" id="rd5-DV-Vru"/>
                             <constraint firstItem="6ms-ZU-AGl" firstAttribute="leading" secondItem="7Ag-tl-ByX" secondAttribute="leadingMargin" id="wB0-I6-6uy"/>
-                            <constraint firstItem="6ms-ZU-AGl" firstAttribute="top" secondItem="4v2-gv-Rhl" secondAttribute="bottom" constant="27" id="zhM-38-JX6"/>
+                            <constraint firstItem="6ms-ZU-AGl" firstAttribute="top" secondItem="4v2-gv-Rhl" secondAttribute="bottom" constant="100" id="zhM-38-JX6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8Yz-Ra-T9X">
@@ -526,6 +534,7 @@
                     <connections>
                         <outlet property="listNameTextField" destination="FCb-ip-ELw" id="6ni-8k-06W"/>
                         <outlet property="listVolumeTextField" destination="5jQ-N7-quE" id="Uru-c7-qsk"/>
+                        <outlet property="pickAlcohol" destination="hJY-vh-8Hx" id="Krh-e0-53c"/>
                         <outlet property="strengthSelect" destination="VhT-bc-ueY" id="7ns-7G-knE"/>
                         <outlet property="unitLabel" destination="JaC-Gi-FY6" id="VLn-cA-3AU"/>
                     </connections>

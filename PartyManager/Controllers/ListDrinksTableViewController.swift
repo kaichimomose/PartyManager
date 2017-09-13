@@ -43,7 +43,7 @@ class ListDrinksTableViewController: UIViewController, UITextFieldDelegate {
         let minutes = Int((time! / 60) % 60)
         let hours = Int(time! / 3600)
         
-        timerView.text = "\(hours):\(minutes):\(seconds)"
+        timerView.text = "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
     }
 
     override func viewWillAppear(_ animated: Bool) {

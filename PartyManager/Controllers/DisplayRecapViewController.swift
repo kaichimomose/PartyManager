@@ -108,7 +108,7 @@ class DisplayRecapViewController: UIViewController, UIImagePickerControllerDeleg
             let minutes = Int((time / 60) % 60)
             let hours = Int(time / 3600)
             
-            drinkHourLabel.text = "\(hours):\(minutes):\(seconds)"
+            drinkHourLabel.text = "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
         }
         
         drinkAmountLabel.text = "\(drinkAmount)"
